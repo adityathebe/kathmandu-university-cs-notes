@@ -1,5 +1,6 @@
 # Kathmandu University - Computer Science course codes
 
+- COMP 101 - C Programming
 - COMP 202 - Data structures and Algorithms
 - MSCS 201 - Discrete Mathematics
 - MCSC 202 - Numerical Methods
