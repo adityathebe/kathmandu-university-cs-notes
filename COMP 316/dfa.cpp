@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int i;
@@ -24,8 +25,8 @@ state** createDFA (int total_states) {
 	return states;
 }
 
-void setTransition (state **states, int transition[], int size) {
-	for ( i = 0; i < size; i += 2 ) {
+void setTransition (state **states, vector<int> transition) {
+	for ( i = 0; i < transition.size(); i += 2 ) {
 		states[i/2]->in0 = states[transition[i]];
 		states[i/2]->in1 = states[transition[i + 1]];
 	}
@@ -38,8 +39,8 @@ int main() {
 	cin >> total_states;
 	state** states = createDFA(total_states);
 	state* current_state = states[0];
-	int transitions[] = {3, 1, 2, 1, 2, 1, 3, 3};
-	setTransition(states, transitions, total_states * 2);
+	vector<int> transitions = {3, 1, 2, 1, 2, 1, 3, 3};
+	setTransition(states, transitions);
 
 	// Take Input String
 	string input;
