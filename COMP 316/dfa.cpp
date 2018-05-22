@@ -24,9 +24,8 @@ state** createDFA (int total_states) {
 	return states;
 }
 
-void setTransition (state **states, int transition[]) {
-	cout << "Size: " << sizeof(transition) / 2;
-	for ( i = 0; i < sizeof(transition) / 2 ; i += 2 ) {
+void setTransition (state **states, int transition[], int size) {
+	for ( i = 0; i < size; i += 2 ) {
 		states[i/2]->in0 = states[transition[i]];
 		states[i/2]->in1 = states[transition[i + 1]];
 	}
@@ -39,21 +38,22 @@ int main() {
 	cin >> total_states;
 	state** states = createDFA(total_states);
 	state* current_state = states[0];
-	int transitions[] = {1, 0, 0, 1};
-	setTransition(states, transitions);
+	int transitions[] = {3, 1, 2, 1, 2, 1, 3, 3};
+	setTransition(states, transitions, total_states * 2);
 
 	// Take Input String
 	string input;
 	cout << "Enter a string: ";
 	cin >> input;
 	
-	//	Make transition
+	// Make transition
 	for (i = 0; i < input.length(); i++) {
 		char alphabet = input[i];
+		cout << "Current state: " << current_state->label << endl;
 		current_state = getNextState(current_state, alphabet);
 	}
 
 	// Display Final State
-	cout << current_state->label;
+	cout << "Final State: " << current_state->label ;
 	return 0;
 }
