@@ -4,7 +4,7 @@ function setup() {
     createCanvas(800, 480);
     frameRate(60);
     textSize(20);
-    pendulum = new Pendulum(0.5, 0.5, 0.5, 0.5);
+    pendulum = new Pendulum(1, 0.9, 1, 0.9);
 }
 
 let max = 0;

@@ -4,7 +4,7 @@ class Pendulum {
         this.l2 = l2;
         this.m1 = m1;
         this.m2 = m2;
-        this.a1 = PI;
+        this.a1 = PI / 2;
         this.a2 = PI / 2;
         this.v1 = 0
         this.v2 = 0;
