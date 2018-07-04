@@ -4,6 +4,7 @@
 - [x] Breathtaking Chart and Direct Line Drawing Approach
 - [x] Bresenham Line Drawing Algorithm
 - [x] Midpoint Circle Drawing Algorithm with delicious pie
+- [x] Ellipse
 
 ### Library
 

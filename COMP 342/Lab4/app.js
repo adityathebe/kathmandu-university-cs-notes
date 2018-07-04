@@ -1,4 +1,4 @@
-function draw_circle(cX, cY, r) {
+function drawCircle(cX, cY, r) {
 	let x = 0;
 	let y = r;
 	let p = null;
@@ -19,13 +19,56 @@ function draw_circle(cX, cY, r) {
 		// Plot pixel in all eight octants
 		point(x + cX, cY + y);
 		point(-x + cX, cY + y);
-		point(x + cX, cY + -y);
-		point(-x + cX, cY + -y);
+		point(x + cX, cY - y);
+		point(-x + cX, cY - y);
 		point(y + cX, cY + x);
 		point(y + cX, cY + -x);
 		point(-y + cX, cY + x);
 		point(-y + cX, cY + -x);
 	}
+}
+
+function draw_line(x1, y1, x2, y2) {
+	let x = x1, y = y1;
+	let stepX, stepY = 1;
+	let dy = y2 - y1;
+	let dx = x2 - x1;
+	if (dy < 0) { dy = -dy; stepY = -1 }
+	if (dx < 0) { dx = -dx; stepX = -1 }
+	dy *= 2;
+	dx *= 2;
+
+	let slope = dy / dx;
+	textSize(40);
+	text(`Slope: ${slope.toFixed(2)}`, width * 0.80, height * 0.14);
+
+	// Parameters
+	let paramA = paramB = 0
+	if (slope < 1) {
+		paramA = 2 * dy;
+		paramB = 2 * dx;
+	} else {
+		paramA = 2 * dx;
+		paramB = 2 * dy;
+	}
+
+	// Initial Decision Parameter
+	let p = paramA - (paramB / 2);
+	ellipse(x, y, 5, 5);
+	point(x, y);
+	for (let i = 0; i < Math.abs(paramB / 2); i++) {
+		if (p < 0) {
+			p += paramA;
+			if (slope <= 1) x += stepX;
+			else y += stepY;
+		} else {
+			p += paramA - paramB;
+			x += stepX, y += stepY;
+		}
+		point(x, y);
+	}
+	ellipse(x, y, 10, 10);
+	ellipse(x, y, 5, 5);
 }
 
 function piechart(data, cX, cY, r) {
@@ -48,7 +91,7 @@ function setup() {
 	// Move Origin to the center
 	strokeWeight(2);	
 	translate(width/2, height/2);
-	draw_circle(0, 0, 200);
+	drawCircle(0, 0, 200);
 	piechart([80, 50, 30, 10], 0, 0, 200);
 
 	// Grid
