@@ -44,7 +44,7 @@ function setup() {
     stroke("#2c3e50");
     strokeWeight(2);
     
-    // Translate origin to center and create axes
+    // Translate origin to center and draw axes
     line(width / 2, 0, width / 2, height);
     line(0, height / 2, width, height / 2)
     translate(width / 2, height / 2);
