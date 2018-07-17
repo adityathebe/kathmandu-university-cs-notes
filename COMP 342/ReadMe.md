@@ -5,6 +5,7 @@
 - [x] Bresenham Line Drawing Algorithm
 - [x] Midpoint Circle Drawing Algorithm with delicious pie
 - [x] Ellipse
+- [x] 2D Transformations
 
 ### Library
 
