@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pendlum Simulation - COMP 342 Project</title>
+    <link rel="stylesheet" href="assets/lib/materialize.min.css">
+    <style>
+        #main-container {
+            padding-top: 30px;
+        }
+    </style>
 </head>
+
 <body>
-    <script src="lib/p5.min.js"></script>
-    <script src="lib/p5.dom.js"></script>
-    <script src="double-pendulum.js"></script>
-    <script src="sketch.js"></script>
-    <!-- <script src="shiffman/sketch.js"></script> -->
+    <nav>
+        <div class="nav-wrapper">
+            <a class="brand-logo center">Double Pendlum Simulation</a>
+        </div>
+    </nav>
+
+    <div class="row" id='main-container'>
+        <div class="col s8" id="sketch-holder"></div>
+        <div class="col s4">
+            <form id="main-form">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" id="form-mass-1" placeholder="Mass A">
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" id="form-mass-2" placeholder="Mass B">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" id="form-length-1" placeholder="Length A">
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" id="form-length-2" placeholder="Length B">
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Start
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="assets/lib/p5.min.js"></script>
+    <script src="assets/lib/p5.dom.js"></script>
+    <!-- <script src="assets/lib/materialize.js"></script> -->
+
+    <!-- Script files -->
+    <script src="assets/js/controller.js"></script>
+    <script src="assets/js/double-pendulum.js"></script>
+    <script src="assets/js/sketch.js"></script>
 </body>
+
 </html>
