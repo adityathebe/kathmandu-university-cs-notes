@@ -6,6 +6,7 @@
 - [x] Midpoint Circle Drawing Algorithm with delicious pie
 - [x] Ellipse
 - [x] 2D Transformations
+- [x] 2D Viewing - Cohen Sutherland Cliping Algorithm
 
 ### Library
 
