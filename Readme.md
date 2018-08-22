@@ -8,3 +8,4 @@
 | MCSC 202 | Numerical Methods |
 | COMP 316 | Theory of Computation |
 | COMP 342 | Computer Graphics |
+| COMP 317 | Operations Research |
