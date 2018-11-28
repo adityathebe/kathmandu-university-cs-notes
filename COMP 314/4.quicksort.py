@@ -3,16 +3,19 @@ def swap(arr, x, y):
 
 def settlePivotElement(elements, lower_range, upper_range):
 	pivotElement = elements[lower_range];
-	pL = lower_range + 1;
-	pR = upper_range;
+	left_pointer = lower_range + 1;
+	right_pointer = upper_range;
 	while True:
-		while pL <= pR and elements[pL] < pivotElement : pL += 1
-		while pL <= pR and elements[pR] > pivotElement : pR -= 1
-		if pL > pR: break
-		swap(elements, pL, pR);
+		while left_pointer <= right_pointer and elements[left_pointer] < pivotElement:
+			left_pointer += 1
+		while left_pointer <= right_pointer and elements[right_pointer] > pivotElement: 
+			right_pointer -= 1
+		if left_pointer > right_pointer: break
+    
+		swap(elements, left_pointer, right_pointer);
 
-	swap(elements, lower_range, pR);
-	return pR;
+	swap(elements, lower_range, right_pointer);
+	return right_pointer;
 
 def quickSort(elements, lower_range, upper_range):
 	index_of_pivot_element = settlePivotElement(elements, lower_range, upper_range)
