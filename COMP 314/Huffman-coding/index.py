@@ -17,7 +17,6 @@ def getFrequencyFromText(txt):
     value = frequency
   '''
   frequency = {}
-
   for char in txt:
     if char in frequency:
       frequency[char] += 1
@@ -44,7 +43,6 @@ def mergeNodes(nodes):
   '''
   Merge the first two nodes from a list of sorted nodes
   '''
-
   first_node = nodes[0]
   second_node = nodes[1]
   new_node = TreeNode(None, first_node.frequency + second_node.frequency)
@@ -124,17 +122,18 @@ if __name__ == "__main__":
   # Read File
   f = open("input.txt", "r")
   text = f.read()
+  if len(text) == 0: raise Exception('Empty input')
 
   # Count Frequency
   frequency = getFrequencyFromText(text)
-  print("Frequency ::", frequency)
-  print()
+  print("Frequency ::", frequency, '\n')
 
   # Generate Huffman tree and encoding maps
   huffman_tree = generateHuffmanTree(frequency)
   encoding_dict = generateEncodingValues(huffman_tree)
-  print("Encoding map ::", encoding_dict)
-  print()
+  if len(encoding_dict) < 2:
+    for key in encoding_dict: encoding_dict[key] = '0'
+  print("Encoding map ::", encoding_dict, '\n')
 
   # Encode and decode text 
   encoded_bits = huffmanEncode(text, encoding_dict)
