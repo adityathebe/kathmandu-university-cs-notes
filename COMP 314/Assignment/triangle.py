@@ -12,6 +12,7 @@ class Node:
     self.left = None
     self.right = None
     self.value = value
+    self.max = None
 
 input = """
 7
@@ -50,22 +51,27 @@ def max(n1, n2):
   else:
     return n2.value
 
-def main(root):
+def findMax(root):
+  # If max for this node has already been evaluated
+  if root.max is not None: return root
+
+  if root.left is not None and root.right is not None:
+    new_val = root.value + max(findMax(root.left), findMax(root.right))
+    root.max = new_val  # Memoization
+    return Node(new_val)
+
+  # Terminal Nodes
   if root.left is None and root.right is None:
     return root
 
-  if root.left is not None and root.right is not None:
-    new_val = root.value + max(main(root.left), main(root.right))
-    return Node(new_val)
-
   if root.left is None and root.right is not None:
-    return main(root.right)
+    return findMax(root.right)
 
   if root.left is not None and root.right is None:
-    return main(root.left)
+    return findMax(root.left)
 
 if __name__ == "__main__":
   makeTree()
   root = nodes[0][0]
-  ans = main(root)
+  ans = findMax(root)
   print(ans.value)
