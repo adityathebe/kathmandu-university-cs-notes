@@ -1,31 +1,30 @@
-# Implementation of algorithm as discussed in class
+# Different algorithm than the one discussed in class
 
 def swap(arr, x, y):
 	(arr[x], arr[y]) = (arr[y], arr[x])
 
 def settlePivotElement(elements, lower_range, upper_range):
 	pivotElement = elements[lower_range]
-	left_pointer = lower_range + 1
-	right_pointer = upper_range
+	left_pointer = lower_range - 1
+	right_pointer = upper_range + 1
 	while True:
-		while left_pointer <= right_pointer and elements[left_pointer] < pivotElement:
+		left_pointer += 1
+		while elements[left_pointer] < pivotElement:
 			left_pointer += 1
-		while left_pointer <= right_pointer and elements[right_pointer] > pivotElement: 
-			right_pointer -= 1
-		if left_pointer > right_pointer: break
-    
-		swap(elements, left_pointer, right_pointer)
 
-	swap(elements, lower_range, right_pointer)
-	return right_pointer
+		right_pointer -= 1
+		while elements[right_pointer] > pivotElement: 
+			right_pointer -= 1
+    
+		if left_pointer < right_pointer:
+			swap(elements, left_pointer, right_pointer)
+		else:
+			return right_pointer
 
 def quickSort(elements, lower_range, upper_range):
 	index_of_pivot_element = settlePivotElement(elements, lower_range, upper_range)
-	
-	if lower_range <= index_of_pivot_element - 1:
-		quickSort(elements, lower_range, index_of_pivot_element - 1)
-
-	if index_of_pivot_element + 1 <= upper_range:
+	if lower_range < upper_range:
+		quickSort(elements, lower_range, index_of_pivot_element)
 		quickSort(elements, index_of_pivot_element + 1 , upper_range)
 
 if __name__ == "__main__":

@@ -1,87 +1,86 @@
+/*
+Date : Feb 27, 2018
+Duration : ~45 minutes
+*/
+
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
 class Heap {
-  private:
-    vector<int> arr;
-    int heapSize;
+private:
+  vector<int> arr;
+  int heapSize;
 
-  public:
-    Heap() {
-      arr = {0};
-      heapSize = 0;
+public:
+  Heap() {
+    arr = {0};
+    heapSize = 0;
+  }
+
+  void display() {
+    for (int i = 1; i < arr.size(); i += 1) {
+      cout << arr[i] << ", ";
+    }
+    cout << endl;
+  }
+
+  void insert(int num) {
+    arr.push_back(num);
+    heapSize += 1;
+  }
+
+  void insert(vector<int> nums) {
+    for (int i = 0; i < nums.size(); i += 1) {
+      insert(nums[i]);
+    }
+  }
+
+  void maxHeapify(int n) {
+    int left = 2 * n;
+    int right = left + 1;
+    int largest = n;
+    if (left <= heapSize && arr[left] > arr[n]) {
+      largest = left;
     }
 
-    void display() {
-      for (int i = 1; i < arr.size(); i += 1) {
-        cout << arr[i] << ", ";
-      }
-      cout << endl;
+    if (right <= heapSize && arr[right] > arr[largest]) {
+      largest = right;
     }
 
-    void insert(int num) {
-      arr.push_back(num);
-      heapSize += 1;
+    if (n != largest) {
+      // Swap
+      int temp = arr[n];
+      arr[n] = arr[largest];
+      arr[largest] = temp;
+      maxHeapify(largest);
     }
+  }
 
-    void insert(vector<int> nums) {
-      for (int i = 0; i < nums.size(); i += 1) {
-        insert(nums[i]);
-      }
+  void buildMaxHeap() {
+    for (int i = heapSize / 2; i >= 1; i -= 1) {
+      maxHeapify(i);
     }
+  }
 
-    void maxHeapify(int n) {
-      int left = 2 * n;
-      int right = left + 1;
-      int largest = n;
-      if (left <= heapSize && arr[left] > arr[n]) {
-        largest = left;
-      }
-
-      if (right <= heapSize && arr[right] > arr[largest]) {
-        largest = right;
-      }
-
-      if (n != largest) {
-        // Swap
-        int temp = arr[n];
-        arr[n] = arr[largest];
-        arr[largest] = temp;
-        maxHeapify(largest);
-      }
+  void buildHeap() {
+    for (int i = 0; i < arr.size(); i += 1) {
+      insert(arr[i]);
     }
+  }
 
-    void buildMaxHeap() {
-      for (int i = heapSize / 2; i >= 1; i -= 1) {
-        maxHeapify(i);
-      }
-    }
+  int getSize() { return heapSize; }
 
-    void buildHeap() {
-      for (int i = 0; i < arr.size(); i += 1) {
-        insert(arr[i]);
-      }
-    }
+  void swap(int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
 
-    int getSize() {
-      return heapSize;
-    }
+  void decreaseSize() { this->heapSize -= 1; }
 
-    void swap(int i, int j) {
-      int temp = arr[i];
-      arr[i] = arr[j];
-      arr[j] = temp;
-    }
-
-    void decreaseSize() {
-      this->heapSize -= 1;
-    }
-
-    vector<int> toArray() {
-      return arr;
-    }
+  vector<int> toArray() { return arr; }
 };
 
 vector<int> heapSort(vector<int> nums) {
@@ -93,13 +92,15 @@ vector<int> heapSort(vector<int> nums) {
     heap.decreaseSize();
     heap.maxHeapify(1);
   }
-  return heap.toArray();
+  vector<int> sorted = heap.toArray();
+  sorted.erase(sorted.begin());
+  return sorted;
 }
 
 int main() {
-  vector<int> nums = { 16, 4, 10, 14, 7, 9, 3, 2, 8, 1 };
+  vector<int> nums = {16, 4, 10, 14, 7, 9, 3, 2, 8, 1};
   vector<int> sorted = heapSort(nums);
-  for (int i = 0 ; i < sorted.size(); i += 1) {
-    cout << sorted[i] << endl;
+  for (int i = 0; i < sorted.size(); i += 1) {
+    cout << sorted[i] << "\t";
   }
 }
