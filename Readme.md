@@ -9,3 +9,5 @@
 | COMP 316 | Theory of Computation |
 | COMP 342 | Computer Graphics |
 | COMP 317 | Operations Research |
+| COMP 409 | Compiler Design |
+| COMP 484 | Machine Learning |
