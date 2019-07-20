@@ -1,11 +1,10 @@
 # Instance-Based Learning
-*(Memory-based learning or Lazy learning)*
+*(Memory-based learning)*
 
 - Instance-based learning methods simply store the training examples *< x<sub>i</sub>, f(x<sub>i</sub>) >*
 - Some instance-based learning methods are - Nearest Neighbor and Locally Weighted Regression
 - Instances are assumed to be points in Euclidean Space. Or in case of case-based reasoning, which is another approach to instance-based learning, the instances are represented by complex logical descriptions rather than points in a Euclidean space.
 - Can approximate both real-valued and discrete-valued target functions
-
 
 ## Advantages
 
@@ -25,3 +24,16 @@
 
 - The training instances provided are simply store.
 - When a new query instance is encountered, a set of similar related instances is retrieved from memory and used to classify the new query instance.
+
+## Lazy Learning vs Eager Learning
+
+**Lazy Learning**:
+- Just store Data set without learning from it
+- Start classifying data when it receive Test data
+- So it takes less time learning and more time classifying data
+- Ex. k-nearest neighbor, Case-based reasoning
+
+**Eager Learning**:
+- Eager learners construct a classification model based on the given training data before receiving data for classification.
+- Due to the model construction, eager learners take a long time for train and less time to predict.
+- Ex. Decision Tree, Naive Bayes, Artificial Neural Networks
