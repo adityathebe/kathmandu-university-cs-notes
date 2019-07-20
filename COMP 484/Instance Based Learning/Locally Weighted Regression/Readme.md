@@ -27,4 +27,4 @@ LWR follows similar approach with few simple modifications. Instead of evaluatin
 
 * * *
 
-![](https://storage.googleapis.com/kaggle-competitions/kaggle/4207/logos/front_page.png)
+![](https://i.imgur.com/b0cBzig.png)
