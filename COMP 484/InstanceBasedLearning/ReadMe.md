@@ -1,9 +1,9 @@
 # Instance-Based Learning
 *(Memory-based learning or Lazy learning)*
 
-- Instance-based learning methods simply store the training examples. 
+- Instance-based learning methods simply store the training examples *< x<sub>i</sub>, f(x<sub>i</sub>) >*
 - Some instance-based learning methods are - Nearest Neighbor and Locally Weighted Regression
-- Instances are assumed to be points in Euclidean Space
+- Instances are assumed to be points in Euclidean Space. Or in case of case-based reasoning, which is another approach to instance-based learning, the instances are represented by complex logical descriptions rather than points in a Euclidean space.
 - Can approximate both real-valued and discrete-valued target functions
 
 
