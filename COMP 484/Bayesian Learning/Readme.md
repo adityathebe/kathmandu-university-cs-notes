@@ -32,3 +32,14 @@ We dropped the term P(D) in the final step because it is a constant and contribu
 - P(E): Prior probability that evidence E will be observed (i.e., the probability of E given no knowledge about which hypothesis holds)
 - P(E|*H*): Probability of observing evidence E given some world in which hypothesis *H* holds
 - P(*H*|E): Probability that *H* holds given the observed training data E. It is called **Posterior probability of h** and in machine learning problems this is what we are interested in.
+
+* * *
+
+## Probabilistic Models vs Non-Probabilistic Models
+
+## Discriminative Models vs Generative Models
+
+- Given an input data x and labels y - A generative model learns the joint probability distribution p(x,y) and a discriminative model learns the conditional probability distribution p(y|x).
+- Discriminative models generally outperform generative models in classification tasks.
+
+![](https://i.stack.imgur.com/Xrmqg.png)
