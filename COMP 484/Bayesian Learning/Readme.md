@@ -43,3 +43,9 @@ We dropped the term P(D) in the final step because it is a constant and contribu
 - Discriminative models generally outperform generative models in classification tasks.
 
 ![](https://i.stack.imgur.com/Xrmqg.png)
+
+* * *
+
+# Bayes Theorem & Concept Learning
+
+Since Bayes Theorem provides a principled way to calculate the posterior probability of each hypothesis given the training data, we can use it as the basis for a straightforward learning algorithm that calculates the probability for each possible hypothesis, then outputs the most probable.
