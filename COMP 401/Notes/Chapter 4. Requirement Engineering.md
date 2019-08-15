@@ -1,6 +1,6 @@
 # Chapter 4. Requirement Engineering
 
-### 1.Requirements Document
+### 1.Requirements Definition
 
 It is a set of high level abstract statements of the user requirements presented in a natural language along with some diagrams, created based on the customer-supplied information, that represent the services/contrainst to be provided. It is targetted to Managerial Level.
 
