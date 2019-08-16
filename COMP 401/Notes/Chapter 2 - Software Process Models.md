@@ -218,5 +218,4 @@ XP strongly encourages team to use practices like pair programming, test driven 
 
 5. Product Owner
 
-In XP the customer plays the role of Product Owner who is always available to the team to set the priority of tasks, bring in new requirements and review the frequent releases. In Scrum, the Scrum Master communicates to the Product Owner to set the stories in order for the sprint from the backlog. S/He also makes sure that the team understands each of the stories during the planning phase. Both of the above Agile methodologies aim to deliver the customer a quality product. After going through all the comparisons between XP and Scrum, I am sure you will be able to find the most suitable one for your project context. Let me know in the comments below which one you prefer more or maybe mix of both.
-
+In XP the customer plays the role of Product Owner who is always available to the team to set the priority of tasks, bring in new requirements and review the frequent releases. In Scrum, the Scrum Master communicates to the Product Owner to set the stories in order for the sprint from the backlog. S/He also makes sure that the team understands each of the stories during the planning phase. Both of the above Agile methodologies aim to deliver the customer a quality product.
