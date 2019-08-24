@@ -1,10 +1,10 @@
 # Bayesian Learning
 
-Bayes theorem provides a way to calculate the probability of a hypothesis based on its prior probability, the probabilities of observing various data given the hypothesis, and the observed data itself.
+Bayesian reasoning provides a probabilistic approach to inference. It is based on the assumption that the quantities of interest are governed by probability distributions and that optimal decisions can be made by reasoning about these probabilities together with observed data.
 
 ### Why study Bayesian Learning ?
 - Bayesian learning algorithms such as naive bayes classifier are among the most practical approaches to certain types of learning problems. Their results are comparable to other learning algorithms like decision tree & neural networks and in some cases even better.
-- They provide a useful perspective for understanding many learning algorithms taht do not explicitly manipulate probabilities.
+- They provide a useful perspective for understanding many learning algorithms that do not explicitly manipulate probabilities.
 
 ### Issues
 - In practice, it is difficult to know the probabilities, required by Bayesian Algorithms, in advance.
@@ -14,7 +14,7 @@ Bayes theorem provides a way to calculate the probability of a hypothesis based 
 
 # Bayes Theorem
 
-Bayes theorem is the cornerstone of Bayesian learning methods because it provides a way to calculate the posterior probability p(*H*|E), from P(*H*) together with P(E) and P(E|*H*). 
+Bayes theorem provides a way to calculate the probability of a hypothesis based on its prior probability, the probabilities of observing various data given the hypothesis, and the observed data itself. Bayes theorem is the cornerstone of Bayesian learning methods because it provides a way to calculate the posterior probability p(*H*|E), from P(*H*) together with P(E) and P(E|*H*). 
 
 Generally, we consider a set of candidate hypotheses *H* and then try to find the most probable hypothesis *h* ∈ H given the observed data D. The best hypothesis *h* is called a *maximum a posteriori* (MAP) hypothesis. We can determine MAP hypothesis (*h*<sub>MAP</sub>) by using Bayes theorem to calculate the posterior probability of each candidate hypothesis.
 
