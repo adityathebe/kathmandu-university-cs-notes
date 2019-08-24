@@ -20,7 +20,7 @@ Generally, we consider a set of candidate hypotheses *H* and then try to find th
 
 ![](http://i.imgur.com/bAUE6ZF.png)
 
-We dropped the term P(D) in the final step because it is a constant and contributes equally to each candidate hypothesis' posterior probability. If we consider that all candidate hypotheses are equally probable then P(*h*) will also be a constant and can be dropped off the equation. In this case, only P(D|h) contributes to the posterior probability. Any hypothesis that maximizes P(D|*h*) is called a *maximum likelihood* (ML) hypothesis, *h*<sub>ML</sub>.
+> We dropped the term P(D) in the final step because it is a constant and contributes equally to each candidate hypothesis' posterior probability. If we consider that all candidate hypotheses are equally probable then P(*h*) will also be a constant and can be dropped off the equation. In this case, only P(D|h) contributes to the posterior probability. Any hypothesis that maximizes P(D|*h*) is called a *maximum likelihood* (ML) hypothesis, *h*<sub>ML</sub>.
 
 #### MAP vs ML ?
 
