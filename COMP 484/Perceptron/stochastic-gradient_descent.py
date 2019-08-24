@@ -1,3 +1,6 @@
+"""Stochastic Gradient Descent to make a Perceptron learn AND Gate"""
+
+
 import math
 from random import random
 
@@ -29,14 +32,15 @@ def sgd(train, l_rate, n_epoch):
 			for i in range(len(row) - 1):
 				weights[i + 1] += l_rate * error * row[i]
 
-		print('> epoch=%d, lrate=%.3f, error=%.3f' % (epoch, l_rate, sum_error))
+		if epoch % 20 is 0:
+			print('> epoch=%d, lrate=%.3f, error=%.3f' % (epoch, l_rate, sum_error))
 	return weights
 
 
 if __name__ == "__main__":
 	dataset = [[1, 1, 1], [1, 0, 0], [0, 1, 0], [0, 0, 0]]
 	l_rate = 0.001
-	n_epoch = 500
+	n_epoch = 1000
 	weights = sgd(dataset, l_rate, n_epoch)
 
 	# Test

@@ -1,3 +1,5 @@
+"""Gradient Descent to make a Perceptron learn AND Gate"""
+
 import math
 from random import random
 
@@ -14,7 +16,7 @@ def predict(inputs, weights):
 	return sgn(sum_total)
 
 
-def sgd(train, l_rate, n_epoch):
+def gradient_descent(train, l_rate, n_epoch):
 	weights = [random() for i in range(len(train[0]))]
 
 	for epoch in range(n_epoch):
@@ -42,7 +44,7 @@ if __name__ == "__main__":
 	dataset = [[1, 1, 1], [1, 0, 0], [0, 1, 0], [0, 0, 0]]
 	l_rate = 0.001
 	n_epoch = 500
-	weights = sgd(dataset, l_rate, n_epoch)
+	weights = gradient_descent(dataset, l_rate, n_epoch)
 
 	# Test
 	for data in dataset:
