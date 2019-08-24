@@ -201,17 +201,21 @@ Politics is the process by which groups of people make decisions. In business, t
 **XP vs Scrum**
 
 1. Development Cycles
+
 Scrum teams typically work in iterations (called sprints) that can be two weeks to one month long. XP teams typically work in iterations that are one or two weeks long, the reason being XP believes in faster releases and quicker feedback.
 
 2. Scope of Change
+
 XP is flexible enough to accommodate changes in requirement/approach during the iteration, and believes in encouraging changes early in the game to deliver a quality product. As long as the team has not started working on a particular feature, it can be replaced for a new feature of the same complexity. Scrum on the other hand does not allow changes during the current sprint once the planning for that sprint is done. If any big change is necessary, the team can stop the current sprint and start a new sprint with new requirement.
 
 3. Task Prioritisation
+
 XP teams work in a strict order prioritised by the customer and the team is required to work on it in the same order. In contrast, the Product Owner in Scrum specifies the priority of development tasks in a sprint but the team still develops in the order they chose to, within a sprint.
 
 4. Engineering Practices
+
 XP strongly encourages team to use practices like pair programming, test driven development, refactoring, continuous integration and automated testing to improve quality, get frequent feedback from the customer & deliver in smaller releases. Scrum mainly focuses on productivity and does not prescribe any engineering practices but the team can adopt practices from XP or Kanban as per their project needs.
 
 5. Product Owner
-In XP the customer plays the role of Product Owner who is always available to the team to set the priority of tasks, bring in new requirements and review the frequent releases. In Scrum, the Scrum Master communicates to the Product Owner to set the stories in order for the sprint from the backlog. S/He also makes sure that the team understands each of the stories during the planning phase. Both of the above Agile methodologies aim to deliver the customer a quality product. After going through all the comparisons between XP and Scrum, I am sure you will be able to find the most suitable one for your project context. Let me know in the comments below which one you prefer more or maybe mix of both.
 
+In XP the customer plays the role of Product Owner who is always available to the team to set the priority of tasks, bring in new requirements and review the frequent releases. In Scrum, the Scrum Master communicates to the Product Owner to set the stories in order for the sprint from the backlog. S/He also makes sure that the team understands each of the stories during the planning phase. Both of the above Agile methodologies aim to deliver the customer a quality product.
