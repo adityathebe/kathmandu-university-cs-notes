@@ -2,7 +2,7 @@
 
 - RBFN is a type of artificial neural network like Multilayer Perceptron. It has three layers : input layer, a single hidden layer and an output layer. 
 - RBFN is named so because it uses radial basis functions as the activation functions.
--The output of the network is a linear combination of radial basis functions of the inputs and neuron parameters.
+- The output of the network is a linear combination of radial basis functions of the inputs and neuron parameters.
 - Even though the approximated function F(x) is a global approximation to f(x), the contribution from each of the value of kernel function (K<sub>*u*</sub>) is localized to a region nearby he point x<sub>*u*</sub>. x<sub>*u*</sub> is one of the instances (training example).
 - Some of its uses are function approximation, classification, and time series prediction.
 
@@ -61,4 +61,4 @@ RBF networks are typically trained in a two-stage process.
 
 - https://www.youtube.com/watch?v=1Cw45yNm6VA
 - https://mccormickml.com/2013/08/15/radial-basis-function-network-rbfn-tutorial/
--https://towardsdatascience.com/radial-basis-functions-neural-networks-all-we-need-to-know-9a88cc053448
+- https://towardsdatascience.com/radial-basis-functions-neural-networks-all-we-need-to-know-9a88cc053448
