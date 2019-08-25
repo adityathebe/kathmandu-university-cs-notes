@@ -34,7 +34,7 @@ The above algorithm can be modified easily to adapt to approximate continous-val
 
 - Which distance function performs better ?
 - How to find the closest points quickly ?
-- Distance is calculated base on *all* attributes of the instances. Due to this many irrelevant attributes might be considered which affects the distance eventually leading to decrease in the accuracy. This difficulty, which arises when many irrelevant attributes are present, is sometimes referred to as the **curse of dimensionality**.
+- Distance is calculated based on *all* attributes of the instances. Due to this many irrelevant attributes might be considered which affects the distance eventually leading to decrease in the accuracy. This difficulty, which arises when many irrelevant attributes are present, is sometimes referred to as the **curse of dimensionality**.
 - Doesn't prioritize nearer neighbors
 
 ## Remarks on kNN
@@ -48,7 +48,7 @@ The inductive bias corresponds to an assumption that the classification of an in
 
 When an instance is described by a large set of attributes the accuracy and the speed of the algorithm is affected. 
 
-Consider applying kNN to a problem in which each instance is described by 20 attributes, but where only 2 of these attributes are relevant to determining the class of the an instance. In this case, instances that have identical values for the 2 relevant attributes may nevertheless be distant from one another in the 20-dimensional instance space. We can also think of situations where the 2 relevant attributes may differ vastly but then the remaining 18 attributes add up to to lower down the distance between the query instance and the irrelevant training instance.
+Consider applying kNN to a problem in which each instance is described by 20 attributes, but where only 2 of these attributes are relevant to determining the classes of the instances. In this case, instances that have identical values for the 2 relevant attributes may nevertheless be distant from one another in the 20-dimensional instance space. We can also think of situations where the 2 relevant attributes may differ vastly but then the remaining 18 attributes add up to lower down the distance between the query instance and the irrelevant training instance.
 
 One approach to overcome this problem is to weight each attribute differently when calculating the distance between two instances. This corresponds to stretching the axes in the Euclidean space, shortening the axes that correspond to less relevant attributes, and lengthening the axes that correspond to more relevant attributes. Another approach would be to completely eliminate the least relevant attributes from the instance space.
 
@@ -56,14 +56,14 @@ One approach to overcome this problem is to weight each attribute differently wh
 
 Because kNN delays all processing until a new query is received, significant computation can be required to process each new query. 
 
-Various methods have been developed for indexing the stored training examples so that the nearest neighbors can be identified more efficiently at some additional cost in memory. One such indexing method is the **kd-tree** in which instances are stored at the leaves of a tree with nearby instances stored at the same or nearby nodes.
+Various methods have been developed for indexing the stored training examples so that the nearest neighbors can be identified more efficiently at some additional cost in memory. One such indexing method is the **kd-tree** in which instances are stored as the leaves of a tree with nearby instances stored at the same or nearby nodes.
 
 * * *
 
 # Distance-Weighted Nearest Neighbor Algorithm
 
 - It is a refinement of kNN.
-- The distance to the query point from each of the k neighbors are weighted. Greater weight is given to closer neighbors.
+- The distance to the query point from each of the k neighbors are weighted. Greater weight is assigned to closer neighbors.
 - The weight can be taken as the inverse of the square of the distance.
 - Since the neighbors are weighted we can consider the entire training instances instead of just *k* of them. However, the algorithm will become much slower. 
 - When all the training instances are considered the algorithm is called a **gobal method** and when only *k* training instances are considered the algorithm is called a **local method**.
