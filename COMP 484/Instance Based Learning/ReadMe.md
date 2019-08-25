@@ -14,7 +14,7 @@
 
 ## Disadvantage
 
-- Overfitting (Instance reduction algorithms have been proposed to overcome this)
+- Overfitting (*Instance reduction algorithms have been proposed to overcome this*)
 
 - The cost of classifying new instances grows with the data. In the worst case, a hypothesis is a list of n training items and the computational complexity of classifying a single new instance is O(n).
 
@@ -22,15 +22,15 @@
 
 ## How it works
 
-- The training instances provided are simply store.
-- When a new query instance is encountered, a set of similar related instances is retrieved from memory and used to classify the new query instance.
+- The training instances provided are simply stored.
+- When a new query instance is encountered, a set of similar related instances is retrieved from memory and is used to classify the new query instance.
 
 ## Lazy Learning vs Eager Learning
 
 **Lazy Learning**:
-- Just store Data set without learning from it
-- Start classifying data when it receive Test data
-- So it takes less time learning and more time classifying data
+- Just store data set without learning from it
+- Starts classifying data when it receives the test data
+- Takes less time learning and more time classifying data
 - Ex. k-nearest neighbor, Case-based reasoning
 
 **Eager Learning**:
