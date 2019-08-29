@@ -9,5 +9,13 @@
 | COMP 316 | Theory of Computation |
 | COMP 342 | Computer Graphics |
 | COMP 317 | Operations Research |
+
+## Year IV
+
+| Code    | Subject |
+| ------- |:-------------:|
 | COMP 409 | Compiler Design |
 | COMP 484 | Machine Learning |
+| COMP 478 | Cloud Computing |
+| COMP 472 | Artificial Intelligence |
+| COMP 401 | Software Engineering |

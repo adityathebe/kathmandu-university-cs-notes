@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "string": "cpp",
+    "iosfwd": "cpp",
+    "iostream": "cpp",
+    "fstream": "cpp",
+    "vector": "cpp",
+    "ostream": "cpp",
+    "stdexcept": "cpp"
+  },
+  "python.formatting.provider": "black"
+}
